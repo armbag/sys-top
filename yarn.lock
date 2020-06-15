@@ -976,6 +976,11 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+node-os-utils@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/node-os-utils/-/node-os-utils-1.2.4.tgz#9e6dd990930f4a39c52501ba8591651ff1c7e0b7"
+  integrity sha512-PG8Pmy6epv/eVH1TLKixJ+SskMwfkZlalml4D2jLkeowAD/81nWrDu1yKNC+z8oYJc+o8/YT8UeWIESfTHXCsg==
+
 nodemon@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-2.0.4.tgz#55b09319eb488d6394aa9818148c0c2d1c04c416"
