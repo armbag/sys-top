@@ -1,16 +1,17 @@
 const path = require('path');
+const { ipcRenderer } = require('electron');
 const osu = require('node-os-utils');
 const cpu = osu.cpu;
 const mem = osu.mem;
 const os = osu.os;
 
-let cpuOverload = 5;
-let alertFrequency = 1;
+let cpuOverload;
+let alertFrequency;
 
-notifyUser({
-	title: 'CPU Overload',
-	body: `CPU is over ${cpuOverload}%`,
-	icon: path.join(__dirname, 'img', 'icon.png'),
+// get settings & values
+ipcRenderer.on('settings:get', (e, settings) => {
+	cpuOverload = +settings.cpuOverload;
+	alertFrequency = +settings.alertFrequency;
 });
 
 // run every 2 seconds
@@ -85,11 +86,8 @@ function runNotify(frequency) {
 		return true;
 	}
 	const notifyTime = new Date(localStorage.getItem('lastNotify'));
-	consolelocalStorage.getItem('lastNotify'));
 	const now = new Date();
-	console.log(now);
 	const diffTime = Math.abs(now - notifyTime);
-	console.log(diffTime);
 
 	const minutesPassed = Math.ceil(diffTime / (1000 * 60));
 
